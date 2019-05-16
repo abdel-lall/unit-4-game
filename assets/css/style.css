@@ -1,0 +1,29 @@
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+
+.img{
+    height: 100px;
+    width: 150px;
+}
+#name{
+    text-align: center
+}
+#choosefighter{
+    border: 2px solid green;
+    padding-top: 20px;
+    background-color: white;
+    
+}
+#title{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    line-height: 120px;
+}
+#text{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    color: white;
+}
