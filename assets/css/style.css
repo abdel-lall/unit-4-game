@@ -8,22 +8,34 @@ body{
     height: 100px;
     width: 150px;
 }
-#name{
+#name,#health{
     text-align: center
 }
-#choosefighter{
+.choosefighter{
     border: 2px solid green;
-    padding-top: 20px;
+    padding-top: 10px;
     background-color: white;
-    
+    width: 184px;
+    height: 194px;  
 }
 #title{
     font-family: 'Permanent Marker', cursive;
     font-size: 60px;
-    line-height: 120px;
+    line-height: 70px;
 }
 #text{
     font-family: 'Permanent Marker', cursive;
     font-size: 40px;
-    color: white;
+    color: black;
 }
+#titlerow{
+    height: 70px;
+}
+.enemiesToFight{
+    border: 2px solid black;
+    padding-top: 10px;
+    background-color: red;
+    width: 184px;
+    height: 194px; 
+}
+
