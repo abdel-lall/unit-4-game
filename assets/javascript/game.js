@@ -95,11 +95,15 @@ $("#attack").click(function() {
     if (idenemy == "fighter4"){
         ctrAtt= fighter4Att;
     }
+    
     healthenemy = healthenemy - att;
+    if (healthenemy > 0){
     healthcaracter = healthcaracter - ctrAtt;
+    }
     $('.choosenone').find('#health').html(healthcaracter);
     $('.defender').find('#health').html(healthenemy);
     $('#messages').html("You Attacked "+$('.defender').find('#name').html()+"for "+att+" damage and he attacked back for "+ ctrAtt+" damage");
+    
     if (healthenemy <= 0){
         $('.defender').remove();
         defenderarea= true;
@@ -115,15 +119,18 @@ $("#attack").click(function() {
         });
 
     }
-  
-  
-    
-    console.log(healthcaracter);
-   console.log(healthenemy);
-   console.log(ctrAtt);
-   console.log(att);
+    if ($('#fifthrow').children().length == 0 && healthenemy <= 0 )
+    {
+        $('#messages').html("  You won");
+        play = false;
+        $("#messages").prepend("<button>restart</button>");
+        $('#messages').find('button').attr("class","btn btn-success");
+        $('#messages').find('button').click(function(){
+            window.location.reload();
+        });
+    }
 }
-if(defenderarea){
+if(defenderarea && $('#fifthrow').children().length !== 0){
     $('#messages').html("No Enemies To Attack")
 }
 
