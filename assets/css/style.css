@@ -11,7 +11,7 @@ body{
 #name,#health{
     text-align: center
 }
-.choosefighter{
+.choosefighter,.choosenone{
     border: 2px solid green;
     padding-top: 10px;
     background-color: white;
@@ -35,6 +35,14 @@ body{
     border: 2px solid black;
     padding-top: 10px;
     background-color: red;
+    width: 184px;
+    height: 194px; 
+}
+.defender{
+    border: 2px solid green;
+    padding-top: 10px;
+    background-color: black;
+    color: white;
     width: 184px;
     height: 194px; 
 }
