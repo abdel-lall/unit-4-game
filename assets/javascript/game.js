@@ -5,6 +5,15 @@ var caracter;
 var picked = true;
 var enemy;
 var defenderarea = true;
+var att=0;
+var ctrAtt=0;
+var healthcaracter=0;
+var healthenemy =0;
+var play =true;
+var fighter1Att = 8;
+var fighter2Att = 5;
+var fighter3Att = 20;
+var fighter4Att = 25;
 
 
 $("#fighter1").click(function() {
@@ -51,9 +60,75 @@ $("#fighter4").click(function() {
             defenderarea = false;
 
         }
+     
 });
 
+ 
+$("#attack").click(function() {
+    if (defenderarea == false && play){
+    $('#messages').html("")
+   healthcaracter = parseInt($('.choosenone').find('#health').html());
+   healthenemy = parseInt($('.defender').find('#health').html());
+    var idcaracter = $(".choosenone").attr("id");
+    var idenemy = $(".defender").attr("id");
+    if (idcaracter == "fighter1"){
+        att = att + fighter1Att;
+    }
+    if (idcaracter == "fighter2"){
+        att = att + fighter2Att;
+    }
+    if (idcaracter == "fighter3"){
+        att = att + fighter3Att;
+    }
+    if (idcaracter == "fighter4"){
+        att = att + fighter4Att;
+    }
+    if (idenemy == "fighter1"){
+        ctrAtt= fighter1Att;
+    }
+    if (idenemy == "fighter2"){
+        ctrAtt= fighter2Att;
+    }
+    if (idenemy == "fighter3"){
+        ctrAtt= fighter3Att;
+    }
+    if (idenemy == "fighter4"){
+        ctrAtt= fighter4Att;
+    }
+    healthenemy = healthenemy - att;
+    healthcaracter = healthcaracter - ctrAtt;
+    $('.choosenone').find('#health').html(healthcaracter);
+    $('.defender').find('#health').html(healthenemy);
+    $('#messages').html("You Attacked "+$('.defender').find('#name').html()+"for "+att+" damage and he attacked back for "+ ctrAtt+" damage");
+    if (healthenemy <= 0){
+        $('.defender').remove();
+        defenderarea= true;
+        $('#messages').html("pick an other Enemy");
+    }
+    if (healthcaracter <= 0){
+        $('#messages').html("  You lost");
+        play = false;
+        $("#messages").prepend("<button>restart</button>");
+        $('#messages').find('button').attr("class","btn btn-success");
+        $('#messages').find('button').click(function(){
+            window.location.reload();
+        });
 
+    }
+  
+  
+    
+    console.log(healthcaracter);
+   console.log(healthenemy);
+   console.log(ctrAtt);
+   console.log(att);
+}
+if(defenderarea){
+    $('#messages').html("No Enemies To Attack")
+}
+
+
+});
 
 function pickCaracter(c , p){
 if (p){
