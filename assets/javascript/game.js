@@ -140,58 +140,89 @@ if(defenderarea && $('#fifthrow').children().length !== 0){
 function pickCaracter(c , p){
 if (p){
  if(c == "fighter1" ){
-    $("#thirdrow").after($("#fighter1"));
+    $("#fighter1").hide();
+    $("#thirdrow").after($("#fighter1"))
+    $("#fighter1").fadeIn(700);
     $("#fighter1").attr("class","col-md-auto choosenone");
+    $("#fighter2").hide();
     $("#fifthrow").append($("#fighter2"));
+    $("#fighter2").delay(700).fadeIn(700);
     $("#fighter2").attr("class","col-md-auto enemiesToFight");
+    $("#fighter3").hide();
     $("#fifthrow").append($("#fighter3"));
+    $("#fighter3").delay(1400).fadeIn(700);
     $("#fighter3").attr("class","col-md-auto enemiesToFight");
+    $("#fighter4").hide();
     $("#fifthrow").append($("#fighter4"));
+    $("#fighter4").delay(2100).fadeIn(700);
     $("#fighter4").attr("class","col-md-auto enemiesToFight");
-    $("#firstrow").empty();
+    // $("#firstrow").empty();
     p = false;
  }
  if(c == "fighter2" ){
+    $("#fighter2").hide();
     $("#thirdrow").after($("#fighter2"))
+    $("#fighter2").fadeIn(700);
     $("#fighter2").attr("class","col-md-auto choosenone");
+    $("#fighter1").hide();
     $("#fifthrow").append($("#fighter1"));
-    $("#fighter1").attr("class","enemiesToFight col-md-auto ");
+    $("#fighter1").delay(700).fadeIn(700);
+    $("#fighter1").attr("class","col-md-auto enemiesToFight");
+    $("#fighter3").hide();
     $("#fifthrow").append($("#fighter3"));
-    $("#fighter3").attr("class","enemiesToFight col-md-auto ");
+    $("#fighter3").delay(1400).fadeIn(700);
+    $("#fighter3").attr("class","col-md-auto enemiesToFight");
+    $("#fighter4").hide();
     $("#fifthrow").append($("#fighter4"));
-    $("#fighter4").attr("class","enemiesToFight col-md-auto ");
-    $("#firstrow").empty();
+    $("#fighter4").delay(2100).fadeIn(700);
+    $("#fighter4").attr("class","col-md-auto enemiesToFight");
     p = false;
  }
  if(c == "fighter3" ){
+    $("#fighter3").hide();
     $("#thirdrow").after($("#fighter3"))
+    $("#fighter3").fadeIn(700);
     $("#fighter3").attr("class","col-md-auto choosenone");
+    $("#fighter1").hide();
     $("#fifthrow").append($("#fighter1"));
+    $("#fighter1").delay(700).fadeIn(700);
     $("#fighter1").attr("class","col-md-auto enemiesToFight");
+    $("#fighter2").hide();
     $("#fifthrow").append($("#fighter2"));
+    $("#fighter2").delay(1400).fadeIn(700);
     $("#fighter2").attr("class","col-md-auto enemiesToFight");
+    $("#fighter4").hide();
     $("#fifthrow").append($("#fighter4"));
+    $("#fighter4").delay(2100).fadeIn(700);
     $("#fighter4").attr("class","col-md-auto enemiesToFight");
-    $("#firstrow").empty();
     p = false;
  }
  if(c == "fighter4"){
+    $("#fighter4").hide();
     $("#thirdrow").after($("#fighter4"))
+    $("#fighter4").fadeIn(700);
     $("#fighter4").attr("class","col-md-auto choosenone");
+    $("#fighter1").hide();
     $("#fifthrow").append($("#fighter1"));
+    $("#fighter1").delay(700).fadeIn(700);
     $("#fighter1").attr("class","col-md-auto enemiesToFight");
+    $("#fighter2").hide();
     $("#fifthrow").append($("#fighter2"));
+    $("#fighter2").delay(1400).fadeIn(700);
     $("#fighter2").attr("class","col-md-auto enemiesToFight");
+    $("#fighter3").hide();
     $("#fifthrow").append($("#fighter3"));
+    $("#fighter3").delay(2100).fadeIn(700);
     $("#fighter3").attr("class","col-md-auto enemiesToFight");
-    $("#firstrow").empty();
     p = false;
  }
 }
 }
 
 function pickEnemy(e){
+    e.hide()
     $("#ninethrow").append(e);
+    e.fadeIn(700);
     e.attr("class","col-md-auto defender");
     $('#messages').html("");
 }
