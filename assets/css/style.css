@@ -18,10 +18,11 @@ body{
 }
 .choosefighter,.choosenone{
     border: 2px solid green;
+    border-radius: 40%;
     padding-top: 10px;
     background-color: white;
     width: 184px;
-    height: 194px;  
+    height: 194px; 
 }
 #title{
     font-family: 'Star Jedi', arial;
@@ -41,6 +42,7 @@ body{
 }
 .enemiesToFight{
     border: 2px solid black;
+    border-radius: 40%;
     padding-top: 10px;
     background-color: red;
     width: 184px;
@@ -48,6 +50,7 @@ body{
 }
 .defender{
     border: 2px solid green;
+    border-radius: 40%;
     padding-top: 10px;
     background-color: black;
     color: white;
@@ -66,5 +69,9 @@ body{
 #attack{
     margin-left: 20px;
     margin-top: 10px;
+}
+.img{
+    border: 1px solid gray;
+    border-radius: 40%;
 }
 
