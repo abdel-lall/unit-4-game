@@ -102,7 +102,7 @@ $("#attack").click(function() {
     }
     $('.choosenone').find('#health').html(healthcaracter);
     $('.defender').find('#health').html(healthenemy);
-    $('#messages').html("You Attacked "+$('.defender').find('#name').html()+"for "+att+" damage and he attacked back for "+ ctrAtt+" damage");
+    $('#messages').html("You Attacked "+$('.defender').find('#name').html()+" for "+att+" damage and he attacked back for "+ ctrAtt+" damage");
     
     if (healthenemy <= 0){
         $('.defender').remove();
@@ -193,7 +193,7 @@ if (p){
 function pickEnemy(e){
     $("#ninethrow").append(e);
     e.attr("class","col-md-auto defender");
-
+    $('#messages').html("");
 }
 
 

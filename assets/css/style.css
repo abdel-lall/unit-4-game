@@ -1,3 +1,8 @@
+@font-face{
+    src: url(../font/star-jedi.ttf);
+    font-family: "Star Jedi";
+}
+
 body{
     background-image: url(../images/background.jpg);
     background-size: cover;
@@ -19,14 +24,17 @@ body{
     height: 194px;  
 }
 #title{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Star Jedi', arial;
     font-size: 60px;
     line-height: 70px;
 }
 #text{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Star Jedi', arial;
     font-size: 40px;
     color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 70px;
 }
 #titlerow{
     height: 70px;
@@ -51,8 +59,12 @@ body{
     font-size: 30px;
 }
 #secondrow,#fourthrow,#sixthrow,#eighthrow{
-    height: 50px;
+    height: 70px;
     margin: 0px;
-}
 
+}
+#attack{
+    margin-left: 20px;
+    margin-top: 10px;
+}
 
