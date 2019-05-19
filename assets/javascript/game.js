@@ -110,7 +110,7 @@ $("#attack").click(function() {
         $('#messages').html("pick an other Enemy");
     }
     if (healthcaracter <= 0){
-        $('#messages').html("  You lost");
+        $('#messages').html(" You have lost the game press restart to play again");
         play = false;
         $("#messages").prepend("<button>restart</button>");
         $('#messages').find('button').attr("class","btn btn-success");
@@ -121,7 +121,7 @@ $("#attack").click(function() {
     }
     if ($('#fifthrow').children().length == 0 && healthenemy <= 0 )
     {
-        $('#messages').html("  You won");
+        $('#messages').html("  You have won the game pess restart to play again");
         play = false;
         $("#messages").prepend("<button>restart</button>");
         $('#messages').find('button').attr("class","btn btn-success");
@@ -131,7 +131,7 @@ $("#attack").click(function() {
     }
 }
 if(defenderarea && $('#fifthrow').children().length !== 0){
-    $('#messages').html("No Enemies To Attack")
+    $('#messages').html("No Enemies To Attack pick an enemy")
 }
 
 
